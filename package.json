@@ -1,0 +1,33 @@
+{
+    "name": "jser",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "build": "cd android && gradlew.bat assembleRelease",
+        "test": "cd android && gradlew.bat installRelease",
+        "start": "node node_modules/react-native/local-cli/cli.js start"
+    },
+    "dependencies": {
+        "query-string": "^4.2.3",
+        "react": "15.3.1",
+        "react-addons-pure-render-mixin": "^15.3.1",
+        "react-native": "0.34.0",
+        "react-native-html-render": "^1.0.4",
+        "react-native-image-pan-zoom": "^1.1.6",
+        "react-native-image-zoom-viewer": "^1.2.18",
+        "react-native-lightbox": "^0.6.0",
+        "react-native-navbar": "^1.5.0",
+        "react-native-scrollable-tab-view": "^0.6.0",
+        "react-native-webview-bridge": "^0.33.0",
+        "react-redux": "^4.4.5",
+        "redux": "^3.5.2",
+        "redux-actions": "^0.11.0",
+        "redux-logger": "^2.6.1",
+        "redux-persist": "^3.5.0",
+        "redux-promise": "^0.5.3",
+        "redux-thunk": "^2.1.0"
+    },
+    "devDependencies": {
+        "eslint-plugin-react": "^6.3.0"
+    }
+}

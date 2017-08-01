@@ -1,0 +1,158 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "commonjs": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true,
+            "modules": true
+        }
+    },
+    "plugins": [
+        "react"
+    ],
+    /**
+     * "off"   或 0 - 关闭规则
+     * "warn"  或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
+     * "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+     */
+    "rules": {
+        //////////////////////////
+        //   常规限制和代码规范   //
+        //////////////////////////
+        // 禁用无效的this，只能用在构造器，类，对象字面量
+        "no-invalid-this": 2,
+        // 禁止重复声明变量
+        "no-redeclare": 2,
+        // 禁止重复的函数声明
+        "no-func-assign": 2,
+        // 禁止在return、throw、continue 和 break语句之后出现不可达代码
+        "no-unreachable": 2,
+        // 禁止使用 eval
+        "no-eval": 1,
+        // 禁用 with
+        "no-with": 2,
+        // 禁止给参数重新赋值
+        "no-param-reassign": 2,
+        // 禁止使用 new 包装实例
+        "no-new-wrappers": 2,
+        // 不能比较自身
+        "no-self-compare": 2,
+        // 函数调用时 函数名与()之间不能有空格
+        "no-spaced-func": 2,
+        // 禁止条件表达式中出现赋值操作符
+        "no-cond-assign": 2,
+        // 在switch语句中禁止重复的case
+        "no-duplicate-case": 2,
+        // switch语句强制default分支，也可添加 // no default 注释取消此次警告  
+        "default-case": 2,
+        // 强制4个空格的缩进
+        "indent": [
+            0,
+            4, {
+                "SwitchCase": 1
+            }
+        ],
+        // 强制使用 === 替代 ==
+        "eqeqeq": [
+            2,
+            "allow-null"
+        ],
+        // 强制文件末尾换行
+        "eol-last": 2,
+        // 空行不能超过两行
+        "no-multiple-empty-lines": [
+            1, {
+                "max": 2
+            }
+        ],
+        // 禁止不必要的分号
+        "no-extra-semi": 2,
+        // 禁止把全局对象 (Math 和 JSON) 作为函数调用 错误：var math = Math();
+        "no-obj-calls": 2,
+        // 禁止正则表达式字面量中出现多个空格
+        "no-regex-spaces": 2,
+        // 禁止出现令人困惑的多行表达式
+        "no-unexpected-multiline": 2,
+        // if while function 后面的 { 必须与 if 在同一行
+        "brace-style": [
+            2,
+            "1tbs", {
+                "allowSingleLine": true
+            }
+        ],
+        // 峰驼命名格式
+        "camelcase": 2,
+        // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，  
+        // always-multiline：多行模式必须带逗号，单行模式不能带逗号  
+        "comma-dangle": [
+            2,
+            "always-multiline"
+        ],
+        // 控制逗号前后的空格  
+        "comma-spacing": [
+            2, {
+                "before": false,
+                "after": true
+            }
+        ],
+        // 控制逗号在行尾出现还是在行首出现  
+        // http://eslint.org/docs/rules/comma-style  
+        "comma-style": [
+            2,
+            "last"
+        ],
+        // 定义对象的set存取器属性时，强制定义get  
+        "accessor-pairs": 2,
+        // 指定数组的元素之间要以空格隔开(,后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格  
+        "array-bracket-spacing": [
+            2,
+            "never"
+        ],
+        // 以方括号取对象属性时，[ 后面和 ] 前面是否需要空格, 可选参数 never, always  
+        "computed-property-spacing": [
+            2,
+            "never"
+        ],
+        // 强制object.key 中 . 的位置, property，'.'号应与属性在同一行, object, '.' 号应与对象名在同一行
+        "dot-location": [
+            2,
+            "property"
+        ],
+        // 字面量属性强制使用双引号
+        "quote-props": [
+            2,
+            "as-needed"
+        ],
+        // 推荐使用单引号
+        "quotes": [
+            1,
+            "single"
+        ],
+        // 关键字前后要空格
+        "keyword-spacing": [
+            2, {
+                "before": true,
+                "after": true
+            }
+        ],
+        // object 左右需要有空格
+        "object-curly-spacing": [
+            1,
+            "always"
+        ],
+        // 运算符左右需要有空格
+        "space-infix-ops": [
+            1, {
+                "int32Hint": false
+            }
+        ]
+    }
+}
